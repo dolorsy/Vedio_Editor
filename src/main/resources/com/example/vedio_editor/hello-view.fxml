@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vedio_editor.HelloController">
+    <center>
+        <StackPane fx:id="pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0">
+                    <StackPane.margin>
+                        <Insets bottom="25" left="25" right="25" top="25" />
+                    </StackPane.margin>
+               <viewport>
+                  <Rectangle2D />
+               </viewport></MediaView>
+                <VBox alignment="BOTTOM_CENTER" maxHeight="60.0" prefHeight="50.0" StackPane.alignment="BOTTOM_CENTER">
+                    <children>
+
+                        <Slider fx:id="progressBar">
+
+                            <StackPane.margin>
+                                <Insets left="10" right="10" />
+                            </StackPane.margin>
+                        </Slider>
+
+
+                        <HBox alignment="BOTTOM_CENTER" maxHeight="40.0" prefHeight="30.0">
+                            <children>
+                                <TextField fx:id="startCut" prefHeight="20.0" prefWidth="60.0" >
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </TextField>
+                                <TextField fx:id="endCut" prefHeight="20.0" prefWidth="60.0" >
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </TextField>
+
+                                <Button fx:id="startDelete" mnemonicParsing="false" onAction="#StartDelete" text="cut">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="openFile" mnemonicParsing="false" onAction="#OpenFileMethod" text="OpenFile">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#playVideo" text="Play">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#pauseVideo" text="Pause">
+
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#stopVideo" text="Stop">
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" right="7.0" />
+                                    </HBox.margin>
+                                </Button>
+
+                                <Slider fx:id="volumeSlider" blockIncrement="1.0" showTickMarks="true">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                </Slider>
+                                <Slider fx:id="speedSlider" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="-10.0" showTickMarks="true">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                </Slider>
+                            </children>
+                        </HBox>
+                    </children>
+                    <StackPane.margin>
+                        <Insets />
+                    </StackPane.margin>
+                </VBox>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
