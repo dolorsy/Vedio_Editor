@@ -1,4 +1,6 @@
 package com.example.vedio_editor;
+import com.xuggle.xuggler.Xuggler;
+import com.xuggle.xuggler.demos.DecodeAndCaptureFrames;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.binding.Bindings;
@@ -166,6 +168,10 @@ public class HelloController {
               endCut.setText(newValue.replaceAll("[^\\d]", ""));
             }
         });
+
+        VideoToFrames.getFrames(file.getAbsolutePath());
+
+
     }
 
     @FXML
