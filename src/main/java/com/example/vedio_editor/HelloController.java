@@ -170,7 +170,7 @@ public class HelloController {
         });
 
         VideoToFrames.getFrames(file.getAbsolutePath());
-
+        System.out.println(VideoToFrames.images);
 
     }
 
